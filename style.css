@@ -1,0 +1,264 @@
+/*copied this over from my personal website which was built on react*/
+
+@import url('https://fonts.googleapis.com/css2?family=Linden+Hill&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+
+:root {
+  font-family: 'Montserrat', sans-serif;
+  /*font-family: 'Linden Hill', serif;*/
+  line-height: 1.5;
+  font-weight: 400;
+
+  margin: 0;
+  padding: 0;
+
+  --primary-color: black;
+  --action-color: lightcoral;
+  --tertiary-color: #b2d27d;
+}
+
+body {
+  color: var(--primary-color);
+  display: flex;
+  text-align: left;
+
+  /* make it full width & height of screen */
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+h2 {
+  font-weight: 600;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.colored-text {
+  color: var(--tertiary-color);
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--tertiary-color);
+}
+
+.buttons {
+  display: flex;
+  gap: 1em;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 2em;
+  width: 8em;
+
+  color: white;
+  background-color: var(--action-color);
+  border-radius: 0.5em;
+  border: none;
+}
+
+.button:hover {
+  color: white;
+  background-color: var(--primary-color);
+  box-shadow: 0.5em 0.5em 0 var(--tertiary-color);
+
+  transition: box-shadow 0.3s ease;
+}
+
+/* HEADER STARTS HERE */
+.navbar {
+  /* put it top of screen */
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 7em;
+  padding-bottom: 1em;
+
+  /* this lets us align icon & navbar at the bottom*/
+  display: flex;
+  justify-content: space-between; /* push to either end */
+  align-items: flex-end;          /* align at bottom */
+
+  /* background-color: lightblue; */
+}
+
+.navbar-contents {
+  margin-right: 2em;
+
+  display: flex;
+  flex-direction: row;
+  gap: 2em;
+}
+
+/* wip */
+/* haven't decided if we want a fixed icon only outside of the navbar */
+/* or a fixed navbar entire /including/ the icon */
+.icon {
+  margin-left: 2em;
+  margin-top: 2em;
+  width: 6em;
+  height: 6em;
+
+  background-image: url('./assets/logo.png');
+  background-size: cover;
+}
+
+/* BODY STARTS HERE */
+.navbar-placeholder {
+  height: 5em;
+}
+
+/* so that each page starts somewhere not right at the top */
+/* should really be called spacer because now i'm using it elsewhere too */
+.page-top {
+  height: 2em;
+}
+
+.content {
+  width: 100%;
+  /*background-color: mintcream;*/
+}
+
+.name {
+  font-size: 2em;
+  font-weight: 600;
+}
+
+.intro {
+  padding: 4em;
+  padding-top: 6em;
+  width: 60%;         /* change this for smaller screens */
+}
+
+.container {
+  padding: 2em;
+}
+
+/* PORTFOLIO */
+.portfolio {
+  display: flex;
+  gap: 2em;
+  background-color: mintcream;
+}
+
+.portfolio-entry {
+  border-radius: 1em;
+}
+
+.portfolio-entry:hover {
+  color: var(--primary-color);
+  background-color: pink;
+  box-shadow: 0.5em 0.5em 0 var(--primary-color);
+
+  transition: box-shadow 0.3s ease;
+}
+
+.portfolio-entry h2 {
+  font-size: 1.25em;
+}
+
+.portfolio-entry p {
+  font-size: 1em;
+}
+
+/* BLOG ENTRY */
+/* wip standardize naming conventions—you used camelcase here but dashes elsewhere*/
+.blogEntries {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.blogEntry {
+  padding: 2em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+
+  border-radius: 1em;
+}
+
+.blogEntry:hover {
+  color: var(--primary-color);
+  background-color: mintcream;
+  box-shadow: 0.5em 0.5em 0 var(--primary-color);
+
+  transition: box-shadow 0.3s ease;
+}
+
+.blogEntry h2 {
+  font-size: 1.25em;
+}
+
+.blogEntry p {
+  font-size: 1em;
+}
+
+/* FOOTER STARTS HERE */
+.footer {
+  justify-items: center;
+  padding: 2em;
+
+  font-size: 0.8em;
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.sitemap-links {
+  display: flex;
+  gap: 0.5em;
+  justify-self: start;
+  flex-direction: column;
+
+}
+
+.footer p {
+  justify-self: start;
+}
+
+.footer a {
+  color: white;
+}
+
+.footer a:hover {
+  color: var(--tertiary-color);
+}
+
+.social-links {
+  justify-self: end;
+  display: flex;
+  gap: 1em;
+}
+
+.social-link {
+  width: 3em;
+  height: 3em;
+
+  background-color: var(--action-color);
+  border-radius: 4em;
+}
+
+.social-link:hover {
+  background-color: var(--tertiary-color);
+}
+
+.footer > .credit {
+  text-align: right;
+  justify-self: end;
+}
+
+/* wip make responsive! */
+/* icon instead of full menu for smallest screen size */
